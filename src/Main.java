@@ -11,5 +11,8 @@ public class Main {
         double average  = (4.8 + 3.9 + 4.5)/3; 
 
         System.out.printf("included: %b, rating: %f, average: %f, year: %d", included, rating, average, year);
+
+        int averageToInt = (int) average;
+        System.out.printf("\naverage to int: %d", averageToInt);
     }
 }
