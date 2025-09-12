@@ -1,17 +1,24 @@
-
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Loop {
+public class While {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         scanner.useLocale(Locale.US);
         double rating = 0;
-        for (int i = 0; i< 3; i++) {
+        double sumRating = 0;
+        int quantityOfRating = 0;
+        while (true) {
             System.out.println("type your movie rating");
-            rating += scanner.nextDouble();
+            rating = scanner.nextDouble();
+            if (rating == -1) {
+                break;
+            }
+            sumRating += rating;
+            quantityOfRating++;
         }
-        double averageRating = rating / 3;
+
+        double averageRating = sumRating / quantityOfRating;
         System.out.printf("average rating: %f", averageRating);
     }
 }
